@@ -9,12 +9,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getData()
-
     }
     
     func getData() {
@@ -31,17 +30,26 @@ class MainViewController: UIViewController {
             (data, response, error) in
             
             guard let responseData = data else {
-                self.alertViewWithTitle("Error!", message: "Did not receive data")
+                performUIUpdatesOnMain() {
+                    self.alertViewWithTitle("Error!", message: "Did not receive data")
+                }
+                
                 return
             }
             
             guard error == nil else {
-                self.alertViewWithTitle("Error!", message: "Error fetching data: \(error)")
+                performUIUpdatesOnMain() {
+                    self.alertViewWithTitle("Error!", message: "Error fetching data: \(error)")
+                }
+                
                 return
             }
             
             guard let dataAsString = String(data: responseData, encoding: NSUTF8StringEncoding) else {
-                self.alertViewWithTitle("Error!", message: "Error: couldn't transform response data to String")
+                performUIUpdatesOnMain() {
+                    self.alertViewWithTitle("Error!", message: "Error: couldn't transform response data to String")
+                }
+                
                 return
             }
             
@@ -50,7 +58,6 @@ class MainViewController: UIViewController {
         
         task.resume()
     }
-
-
+    
 }
 
