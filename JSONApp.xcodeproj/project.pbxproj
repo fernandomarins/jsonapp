@@ -12,6 +12,8 @@
 		559510F41CD2E09F00F26116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559510F21CD2E09F00F26116 /* Main.storyboard */; };
 		559510F61CD2E09F00F26116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559510F51CD2E09F00F26116 /* Assets.xcassets */; };
 		559510F91CD2E09F00F26116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559510F71CD2E09F00F26116 /* LaunchScreen.storyboard */; };
+		559511011CD2E44B00F26116 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559511001CD2E44B00F26116 /* Constants.swift */; };
+		559511031CD2E4B500F26116 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559511021CD2E4B500F26116 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		559510F51CD2E09F00F26116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		559510F81CD2E09F00F26116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		559510FA1CD2E09F00F26116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559511001CD2E44B00F26116 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		559511021CD2E4B500F26116 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				559510EE1CD2E09F00F26116 /* AppDelegate.swift */,
 				559510F01CD2E09F00F26116 /* MainViewController.swift */,
+				559511001CD2E44B00F26116 /* Constants.swift */,
+				559511021CD2E4B500F26116 /* Extensions.swift */,
 				559510F21CD2E09F00F26116 /* Main.storyboard */,
 				559510F51CD2E09F00F26116 /* Assets.xcassets */,
 				559510F71CD2E09F00F26116 /* LaunchScreen.storyboard */,
@@ -137,6 +143,8 @@
 			files = (
 				559510F11CD2E09F00F26116 /* MainViewController.swift in Sources */,
 				559510EF1CD2E09F00F26116 /* AppDelegate.swift in Sources */,
+				559511011CD2E44B00F26116 /* Constants.swift in Sources */,
+				559511031CD2E4B500F26116 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

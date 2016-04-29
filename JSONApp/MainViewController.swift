@@ -19,10 +19,8 @@ class MainViewController: UIViewController {
     
     func getData() {
         
-        let gistsEndpoint = "https://api.github.com/users/cmoulton/gists"
-        
-        guard let url = NSURL(string: gistsEndpoint) else {
-            print("Error: cannot create URL")
+        guard let url = NSURL(string: Constants().gistsEndpoint) else {
+            alertViewWithTitle("Error!", message: "Cannot create URL.")
             return
         }
         
@@ -33,17 +31,17 @@ class MainViewController: UIViewController {
             (data, response, error) in
             
             guard let responseData = data else {
-                print("Error: did not receive data")
+                self.alertViewWithTitle("Error!", message: "Did not receive data")
                 return
             }
             
             guard error == nil else {
-                print("Error fetching data: \(error)")
+                self.alertViewWithTitle("Error!", message: "Error fetching data: \(error)")
                 return
             }
             
             guard let dataAsString = String(data: responseData, encoding: NSUTF8StringEncoding) else {
-                print("Error: couldn't transform response data to String")
+                self.alertViewWithTitle("Error!", message: "Error: couldn't transform response data to String")
                 return
             }
             
