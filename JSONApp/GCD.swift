@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Method created to make sure all updates are made in the main thread
 func performUIUpdatesOnMain(updates: () -> Void) {
     dispatch_async(dispatch_get_main_queue()) {
         updates()
